@@ -5,7 +5,7 @@ def game():
         quit()
     inventory = []
     print("Welcome to the game")
-    name = "Alex" #input("What is your name: "
+    name = input("What is your name: "
     print(f"Okay {name}, your wake up in a dark room. You have no source of light around you and feel the cold stone on your back.")
 
     print("\nWhat do you do?")
