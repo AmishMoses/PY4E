@@ -26,13 +26,13 @@ def file_manipulation():
         for line in read_file:
             line = line.strip() # This gets rid of the below talked about extra \n
             if line.startswith('From:'): # Will show a list of received email domains
-                print(line) # This will have a blank line due to the print statement adding a ]n
+                print(line) # This will have a blank line due to the print statement adding a \n .strip() fixes this
                 # Print adds a \n and the file itself has a \n strip() or rstrip() woould fix that
     #search_file()
 
     
     
-    def continue_skip():
+    def continue_skip(): # The same process as above with reversed logic
         counter = 0
         for line in read_file:
             line = line.strip() # This gets rid of the below talked about extra \n

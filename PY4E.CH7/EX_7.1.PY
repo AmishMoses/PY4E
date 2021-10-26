@@ -5,6 +5,7 @@ try:
     fh = open(fname)
 except:
     quit()
+    
 con = fh.read()
 con = con.strip()
 print(con.upper()) 

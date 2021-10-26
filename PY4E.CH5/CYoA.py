@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/env/ python
 def game():
     def death_note():
         print("I'm sorry, it seems the game was too much for you. In all fairness I heard the developer rigged it to make you die fast so he didn't have to work as hard")
