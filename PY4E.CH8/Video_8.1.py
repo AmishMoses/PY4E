@@ -25,7 +25,9 @@ def range_function():
     print(range(len(list1))) # Will return (0, 3)
 
     friends = ['Manny', 'Andrew', 'Talyn']
-    for i in range(len(friends)):
+    for i in range(len(friends)): # This will run the range function and substitude the proper number to run the command
         friend = friends[i]
         print("Happy Halloween:", friend)
+    
 range_function()
+print('\n')

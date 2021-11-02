@@ -24,10 +24,10 @@ splitting()
 
 print('\n')
 def double_split_patteren():
-    data = 'From someemailaddr@uct.ac.za Sat Jan % 09:10:19 2021'
+    data = 'From someemailaddr@uct.ac.za Sat Jan 09:10:19 2021'
     first = data.split() # This will make the entry a list
     email = first[1] # Now that we have it split we can just index to the email postition
     print(email)
-    host = email.split('@') # This will seperate the clients email from the host provider
+    host = email.split('@') # This will seperate the clients email from the host provider at the '@'
     print(host[1])
 double_split_patteren()
