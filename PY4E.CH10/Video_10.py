@@ -52,3 +52,19 @@ for k, v in d.items():
 print(tmp)
 tmp = sorted(tmp, reverse=True) # Sorts from highest to lowest
 print(tmp)
+
+def mostcommon():
+    fopen = open(input())
+    count = {}
+    for line in fopen:
+        words = line.split()
+        for word in words:
+            count[word] = count[word, 0] + 1
+    lst = []
+    for key,val in count.items():
+        newtuple = (val, key)
+        lst.append(newtuple)
+    lst = sorted(lst, reverse=True) # High to low
+    for val, key in lst[:10]:
+        print(key, val)
+#mostcommon()
