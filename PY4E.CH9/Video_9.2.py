@@ -30,6 +30,6 @@ def getmethod():
     count = {}
     names = ['Manny', 'Alex', 'Andrew', 'Mike', 'Talyn', 'Steve', 'Alex']
     for name in names:
-        count[name] = count.get(name, 0) + 1
+        count[name] = count.get(name, 0) + 1 # This assigns a key in this case name a default value and if the key is present adds 1
     print(count)
 getmethod()
