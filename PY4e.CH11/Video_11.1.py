@@ -33,6 +33,6 @@ Using re.search() like .startswith()
 if re.search('^From:', line): # ^ means the beginning
     print(line)     
 
-re.search('^x-\S+:', line) # ^Start with x- \S+ include and non-whitespace character one or more times end with :
+re.search('^x-\S+:', line) # ^Start with x- \S+ include any non-whitespace character one or more times end with :
 
 '''
