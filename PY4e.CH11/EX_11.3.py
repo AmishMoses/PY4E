@@ -33,6 +33,15 @@ print(sum) # Correct 399884
 
 
 
+'''
+We do not use num+numlist. Concatenation is not needed. What ONE line of code to do we write to loop over a list to
+ get individual strings?
+ Delete everything after the num=re.findall(). We do not need lists, conditionals, or index positions.
+
+Findall() returns lists exactly like split() does. What did we do in assignment 8.4 to go from a list 
+of words to individual words?'''
+
+
 
 
 
