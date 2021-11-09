@@ -16,18 +16,10 @@ for line in handle:
 for data in numlist: # Data is our iteration variable
     sum = sum + int(data) # Parsing through the list and making each element an int before adding to var(sum)
 print(sum) # Correct 399884
-# My code still apparently isn't streamlined, but the TA loves to say it's wrong without and give riddles about how to fix it 
-# so it runs, it works, it stays
+# My code still apparently isn't streamlined, but the TA loves to say it's wrong and only give riddles about how to fix it 
+# so it runs, it works, it stays. 
 
-
-
-
-
-
-
-
-
-
+# Prompt 
 '''Finding Numbers in a Haystack
 In this assignment you will read through and parse a file with text and numbers. You will extract all the numbers 
 in the file and compute the sum of the numbers.
