@@ -1,4 +1,4 @@
-#!/usr/env/ python
+#!/usr/env python
 '''Dictionaries are the second types of collections we will be working with
 A list is a linear collection of values thtat stay in order
 A dictionary is a 'bag' of values, each with its own label (key:value)'''

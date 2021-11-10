@@ -1,4 +1,4 @@
-#!/usr/env/ python
+#!/usr/env python
 
 # Use the file name mbox-short.txt as the file name
 fname = input("Enter file name: ")

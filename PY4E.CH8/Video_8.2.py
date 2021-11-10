@@ -1,4 +1,4 @@
-#!/usr/env/ python
+#!/usr/env python
 
 '''We can create a new list by adding two list together this is know as concatenating'''
 def cat():

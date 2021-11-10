@@ -1,4 +1,4 @@
-#!/usr/env/ python
+#!/usr/env python
 # Use words.txt as the file name
 fname = input("Enter file name: ")
 try:

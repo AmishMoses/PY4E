@@ -1,4 +1,4 @@
-#!/usr/env/ python
+#!/usr/env python
 import socket
 mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 mysock.connect(('data.pr4e.org', 80)) # This is a function call with a tuple inside

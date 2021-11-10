@@ -1,4 +1,4 @@
-#!/usr/env/ python
+#!/usr/env python
 # Hypertext Transport Protocol
 ''' You can log onto a sever manually using telnet
 telnet data.pr4e.org 80

@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/env python
 import re
 print(sum(int(count) for count in re.findall('[0-9]+', open('C:/Users/bigal/Desktop/PY4E/PY4e.CH11/data.txt').read())))
 '''oneliner code print( sum( [ ****** *** * in **********('[0-9]+',**************************.read()) ] ) )'''

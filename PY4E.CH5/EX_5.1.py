@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/env python
 count = 0
 total = 0.0
 while True:

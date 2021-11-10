@@ -1,4 +1,4 @@
-#!/usr/env/ python
+#!/usr/env python
 # Sockets in Python
 # Python has built in support for TCP sockets
 import socket

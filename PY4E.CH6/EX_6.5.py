@@ -1,4 +1,4 @@
-#!?usr/env/ python
+#!/usr/env python
 
 def my_solution():
     text = "X-DSPAM-Confidence:    0.8475"

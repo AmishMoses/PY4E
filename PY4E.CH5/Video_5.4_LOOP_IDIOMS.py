@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/env python
 
 # Counting in a loop
 # Counts the total amounts of iteations through the list

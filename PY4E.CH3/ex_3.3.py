@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/env python
 grade = input("Enter Score: ")
 score = float(grade)
 if score > 1.0:

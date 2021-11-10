@@ -1,4 +1,4 @@
-#!/usr/env/ python
+#!/usr/env python
 '''The general pattern to count the words in a line of text is to split the line into words, then loop
 through the words and use a dict to track the count of each word independently'''
 def countpattern():

@@ -1,4 +1,4 @@
-#!/usr/env/ python
+#!/usr/env python
 
 '''Tuples are immutable versions of lists using () instead of []'''
 x = ('Glen', 'Sally', 'Joseph')

@@ -1,4 +1,4 @@
-#!/usr/env/ python
+#!/usr/env python
 
 '''A list is a collection which means in a single variable we can assign more than one value
 list constants are surrounded by [] and the elements seperated by commas. A list can contain any python object

@@ -1,4 +1,4 @@
-#!?usr/env/ python
+#!/usr/env python
 def excer():
     fname = input("Enter file name: ")
     if len(fname) < 1:

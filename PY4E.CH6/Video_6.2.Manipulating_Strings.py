@@ -1,4 +1,4 @@
-#!/usr/env/ python
+#!/usr/env python
 '''Using in as a logical operator'''
 def quick():
     fruit = "Bananas"

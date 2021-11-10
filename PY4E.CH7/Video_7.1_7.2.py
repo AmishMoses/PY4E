@@ -1,4 +1,4 @@
-#!/usr/env/ python
+#!/usr/env python
 
 '''Using open() handle = open('filename', 'mode')'''
 # Modes = open, read, write, close (o,r,w,c)

@@ -1,4 +1,4 @@
-#!/usr/env/ python
+#!/usr/env python
 def ex():
     fname = input("Enter file name: ")
     fh = open(fname)

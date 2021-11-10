@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/env python
 largest = None
 smallest = None
 while True:

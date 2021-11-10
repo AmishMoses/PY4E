@@ -1,4 +1,4 @@
-#!/usr/env/ python
+#!/usr/env python
 '''Split breaks a string into parts and produces a list of strings. We think of these as words
 We can access a particular word or loop through all the words'''
 def splitting():

@@ -1,4 +1,4 @@
-#!/usr/env/ python
+#!/usr/env python
 
 '''Using indexing to get a specific value in an input string'''
 def index_string():

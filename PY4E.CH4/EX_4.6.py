@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/env python
 def computepay(hours, rate):
     print(f"Computing pay at {hours} hours and {rate} per hour")
     if hours < 40:

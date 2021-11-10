@@ -1,4 +1,4 @@
-#!/usr/env/ python
+#!/usr/env python
 # Dictionary tracebacks 
 # It is an error ti reference a key which is not in the dictionary
 # We can use the in operator to see if a key is in the dictionary

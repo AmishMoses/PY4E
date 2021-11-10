@@ -1,4 +1,4 @@
-#!/usr/env/ python
+#!/usr/env python
 import re #before you can use regex you have to import it into python
 '''Regular Expressions
 Regex provides a concise and flexible means for matching strings of text

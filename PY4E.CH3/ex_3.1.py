@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/env python
 hrs = input("Enter Hours:")
 rate = input("Rate of Pay:")
 r = float(rate)
