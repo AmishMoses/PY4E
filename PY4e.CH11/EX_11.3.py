@@ -8,6 +8,12 @@ name = input("Enter file:")
 if len(name) < 1:
     name = "C:/Users/bigal/Desktop/PY4E/PY4e.CH11/data.txt"
 handle = open(name)
+for line in handle:
+    data = re.findall('[0-9]+', line)
+    if len(data) < 1: continue
+    for a in data:
+        sum = sum + int(a)
+print(sum)
 
 for line in handle:
     num = re.findall('[0-9]+', line) # Pattern should return 0-9+ any number 0-9 repeating
