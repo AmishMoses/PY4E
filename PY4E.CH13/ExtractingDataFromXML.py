@@ -38,3 +38,52 @@ Retrieved 4189 characters
 Count: 50
 Sum: 2...
 '''
+import xml.etree.ElementTree as ET
+import urllib.request, urllib.response, urllib.error # Import both urllib and ET
+fhand = urllib.request.urlopen('http://py4e-data.dr-chuck.net/comments_1383147.xml') # Use urllib to connect to the data
+data = fhand.read() # Use read to open the information
+# print(data) # This allows us to see the tags of the data and further identify what tree we need to be going down
+'''
+Format of data to get to count we need to use (comment/count)
+<?xml version="1.0" encoding="UTF-8"?>\n
+<commentinfo>\n  
+  <note>This file contains the actual data for your assignment - good luck!</note>\n\n  
+    <comments>\n    
+    <comment>\n       
+      <name>Aamanee</name>\n       
+      <count>98</count>\n    
+    </comment>\n    
+    <comment>\n       
+      <name>Mysha</name>\n       
+      <count>98</count>\n    
+    </comment>\n    
+    <comment>\n       
+      <name>Braeden</name>\n       
+      <count>98</count>\n  
+  </comment>\n    
+  <comment>\n
+  continued....
+'''
+
+tree = ET.fromstring(data)
+stage1 = tree.findall('comments/comment')
+count = 0
+
+'''
+for numbers in stage1:
+  numbers = int(numbers.find('count').text)
+  #count += int(numbers.find('count').text)
+  count += numbers
+print(count)
+'''
+
+
+
+tree = ET.fromstring(data)
+stage1 = tree.findall('comments/comment') # This will let us iterate through the tree and grab the count in a for loop
+count = 0
+sum = 0
+for numbers in stage1:
+  numbers = int(numbers.find('count').text)
+  sum += numbers 
+print(sum)
