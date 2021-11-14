@@ -44,7 +44,7 @@ fhand = urllib.request.urlopen('http://py4e-data.dr-chuck.net/comments_1383147.x
 data = fhand.read() # Use read to open the information
 # print(data) # This allows us to see the tags of the data and further identify what tree we need to be going down
 '''
-Format of data to get to count we need to use (comment/count)
+Format of data to get to count we need to use (comments/comment/count)
 <?xml version="1.0" encoding="UTF-8"?>\n
 <commentinfo>\n  
   <note>This file contains the actual data for your assignment - good luck!</note>\n\n  
@@ -66,22 +66,7 @@ Format of data to get to count we need to use (comment/count)
 '''
 
 tree = ET.fromstring(data)
-stage1 = tree.findall('comments/comment')
-count = 0
-
-'''
-for numbers in stage1:
-  numbers = int(numbers.find('count').text)
-  #count += int(numbers.find('count').text)
-  count += numbers
-print(count)
-'''
-
-
-
-tree = ET.fromstring(data)
 stage1 = tree.findall('comments/comment') # This will let us iterate through the tree and grab the count in a for loop
-count = 0
 sum = 0
 for numbers in stage1:
   numbers = int(numbers.find('count').text)
