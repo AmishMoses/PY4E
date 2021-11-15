@@ -42,8 +42,10 @@ count = 0
 url = "http://py4e-data.dr-chuck.net/comments_1383148.json"
 open = urllib.request.urlopen(url)
 data = open.read()
+print(data)
 
 info = json.loads(data)
+print(info)
 for item in info["comments"]:
 	number = int(item["count"])
 	count += number
