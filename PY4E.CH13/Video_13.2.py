@@ -1,4 +1,4 @@
-#!?usr/env python
+#!/usr/env python
 # eXtensible Markup Language
 '''
 XML also like HTML uses 'tags' <>
