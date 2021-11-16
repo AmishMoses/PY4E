@@ -67,6 +67,7 @@ for tag in tags:
         sum = sum + int(x)
 print(sum)'''
 # Attempting to use decode()
+# decode() and just assigning the data to a str() seems to work equally well 
 tags = soup('span') # Searches for all Span tags in the document and creates a list
 print(tags)    
 for tag in tags:

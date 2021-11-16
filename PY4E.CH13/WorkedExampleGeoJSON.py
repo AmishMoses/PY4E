@@ -48,8 +48,4 @@ while True:
     lng = js['results'][0]['geometry']['location']['lng']
     print('lat', lat, 'lng', lng)
     location = js['results'][0]['formatted_address']
-    lngname = js['results'][0]['address_components']
-    for ln in lngname:
-        print(ln['long_name'])
     print(location)
-    
