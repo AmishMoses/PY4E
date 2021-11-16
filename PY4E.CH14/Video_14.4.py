@@ -10,7 +10,7 @@ These child classes can also be called sub-classes
 '''
 class PartyAnimal: # Class is a reserved word
     x = 0 # Each PartyAnimal object has this bit of data
-    name = "Butt"
+    name = ""
 
     def __init__(self, nam):
         self.name = nam
@@ -26,7 +26,7 @@ class FootballFan(PartyAnimal): # FootballFan is a class which extends PartyAnim
         self.points += 7
         self.party()
         print(self.name, "points",self.points)
-s = PartyAnimal('')
+s = PartyAnimal('Sally')
 s.party()
 j = FootballFan("Jim")
 j.touchdown()

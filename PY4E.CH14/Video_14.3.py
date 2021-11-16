@@ -52,9 +52,9 @@ class PartyAnimal: # Class is a reserved word
     def party(self): # Each PArtyAnimal object has a bit of code
         self.x = self.x + 1
         print(self.name,"party count of",self.x)
-s = PartyAnimal("Sally")
+s = PartyAnimal("Sally") # Sally becomes 'z'
 s.party()
 
-j = PartyAnimal("Jim")
+j = PartyAnimal("Jim") # Jima becomes 'z'
 j.party()
 s.party()
