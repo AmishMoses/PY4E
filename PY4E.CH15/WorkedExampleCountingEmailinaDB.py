@@ -17,7 +17,7 @@ fh = open(fname)
 for line in fh:
     if not line.startswith('From: '): continue # This is how we will find the email 
     pieces = line.split() # Split will give us ['From:', 'Yadayada@email.com']
-    email = pieces[1] # This gives us jsut the email
+    email = pieces[1] # This gives us just the email
     cur.execute('SELECT count FROM Counts WHERE email =?',(email,)) 
     # The ? acts as a placeholder and combats SQL injection that will be replaced by the tuple with one item (email,)
     row = cur.fetchone() # Grab the first item and give it to 'row'
