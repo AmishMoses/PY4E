@@ -35,6 +35,6 @@ for line in fh:
 sqlstr = 'SELECT email, count FROM Counts ORDER BY count DESC LIMIT 10'
 # This is an SQL command we will execute underneath only this time we will call the variable
 for row in cur.execute(sqlstr):
-    print(str(row[0],row[1]))
+    print(str(row[0]),row[1])
     # Row 0 = email and Row 1 = count
-cur.connection()
+cur.close()

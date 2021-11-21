@@ -36,11 +36,11 @@ cursor.execute('DROP TABLE IF EXISTS Counts')
 
 # Now we will send another command through the cursor to create a table Counts
 # With two columns named email and count
-cursor.execute('CREATE TABLE Counts (email TEXT, count INTERGER)')
+cursor.execute('CREATE TABLE Counts (org TEXT, count INTERGER)')
 
 # Now we will bring the file in that we will be working with
 fname = input('Enter a file name: ')
-if len(fname) < 1: fname = 'mbox-short.txt'
+if len(fname) < 1: fname = 'C:/Users/bigal/Desktop/PY4E/Databases/mbox.txt'
 fh = open(fname)
 
 # Now lets work with that data
@@ -48,25 +48,32 @@ for line in fh:
     if not line.startswith('From: '): continue # Only grab From: lines
     pieces = line.split() # Return a list of the words in the string using a delimiter string
     email = pieces[1] # This gives us just the email
-    cursor.execute('''
-    SELECT count from Counts WHERE email =?''',(email))
+    emsender = email.split('@')
+    email = emsender[1]
+
+
+    cursor.execute('SELECT count FROM Counts WHERE org = ?',(email,))
     # The ? acts as a placeholder and combats SQL injection that will be replaced by the tuple with one item (email,)
     row = cursor.fetchone() # Grabs the first item and assigns it to row
 
+    print(pieces)
+    print(email)
+    
+
+
     if row is None:
-        cursor.execute('''
-        INSERT INTO Counts (email, count) VALUES (?,1)''',(email,))
-        # If 'row' doesn't exist add (email,1) as VALUES
+        cursor.execute('INSERT INTO Counts (org, count) VALUES (?,1)',(email,))
+        # If 'row' doesn't exist add (org,1) as VALUES
 
     else:
-        cursor.execute('UPDATE Counts SET counts = counts + 1 WHERE email =?',(email,))
+        cursor.execute('UPDATE Counts SET count = count + 1 WHERE org =?',(email,))
         # If the row exists UPDATE Counts to Counts +=1 
     connect2DB.commit()
     # Commit will commit the data from ram to the DB or disk 
 
 # Now we will write and SQL command and loop through it with our row command from earlier
-sqlstr =' SELECT email, counts FROM Counts ORDER BY count DESC LIMIT 10'
+sqlstr =' SELECT org, count FROM Counts ORDER BY count DESC LIMIT 10'
 for row in cursor.execute(sqlstr):
-    print(str(row[0],row[1]))
-    # Row 0 = email and Row 1 = count
-cursor.connection()
+    print(str(row[0]),row[1])
+    # Row 0 = org and Row 1 = count
+cursor.close()
