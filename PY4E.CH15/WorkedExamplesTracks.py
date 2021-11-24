@@ -2,7 +2,7 @@
 import xml.etree.ElementTree as ET
 import sqlite3
 
-conn = sqlite3.connect('tracksdb.sqlite')
+conn = sqlite3.connect('tracksdb.sqlite') # This connects to or creates the DB
 cur = conn.cursor() # The cursor() works as a file handle for a DB
 
 # Make some fresh tables using executescript()
@@ -11,28 +11,28 @@ DROP TABLE IF EXISTS Artist;
 DROP TABLE IF EXISTS Album;
 DROP TABLE IF EXISTS Track;
 
-CREATE TABLE Artist(
-    id INTEGER NOT NULL PRIMARY KEY AUNTOINCREMENT UNIQUE,
+CREATE TABLE Artist (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
     name TEXT UNIQUE
 );
 
 CREATE TABLE Album (
-    id INTEGER NOT NULL PRIMARY KEY AUNTOINCREMENT UNIQUE,
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
     artist_id INTEGER,
     title TEXT UNIQUE
 );
 
 CREATE TABLE Track (
-    id INTEGER NOT NULL PRIMARY KEY AUNTOINCREMENT UNIQUE,
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
     title TEXT UNIQUE,
-    album_id INTEGER.
+    album_id INTEGER,
     len INTEGER, rating INTEGER, count INTEGER
 );
 ''')
 # Foriegn Key for artist_id and album_id
 
 fname = input('Enter file name: ')
-if len(fname) < 1 : fname = 'Library.xml'
+if len(fname) < 1 : fname = 'C:/Users/bigal/Desktop/PY4E/Databases/Library.xml'
 
 # <key>Track ID</key><integer>369</integer>
 # <key>Name</key><string>Another One Bites The Dust</string>
