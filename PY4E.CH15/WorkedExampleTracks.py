@@ -47,9 +47,9 @@ def lookup(d, key):
     return None
 
 stuff = ET.parse(fname)
-all = stuff.findall('dict/dict/dict')
+all = stuff.findall('dict/dict/dict') # This will dig into the third <dict> in the XML file
 print('Dict count:', len(all))
-for entry in all:
+for entry in all: # entry will be our iteration variable to iterate through the matched XML
     if (lookup(entry, 'Track ID') is None) : continue
 
     name = lookup(entry, 'Name')
@@ -67,11 +67,13 @@ for entry in all:
         VALUES ( ? )''', ( artist, ) )
     cur.execute('SELECT id FROM Artist WHERE name = ? ', (artist, ))
     artist_id = cur.fetchone()[0]
+    # This will SELECT id from Artist so that it can be assigned as a foriegn key inside Album
 
     cur.execute('''INSERT OR IGNORE INTO Album (title, artist_id) 
         VALUES ( ?, ? )''', ( album, artist_id ) )
     cur.execute('SELECT id FROM Album WHERE title = ? ', (album, ))
     album_id = cur.fetchone()[0]
+    # This will SELECT id from Album so that it can be assigned as a foriegn key inside Track
 
     cur.execute('''INSERT OR REPLACE INTO Track
         (title, album_id, len, rating, count) 
